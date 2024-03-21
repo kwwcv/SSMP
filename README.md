@@ -12,3 +12,7 @@ Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic 
       primaryClass={cs.CV}
 }
 ```
+
+### License
+
+This project is licensed under [NTU S-Lab License 1.0](LICENSE) 
