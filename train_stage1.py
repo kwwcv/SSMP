@@ -1,3 +1,4 @@
+# modified based on 'train_single_seq.py in MotionNet(https://www.merl.com/research/?research=license-request&sw=MotionNet)
 import os
 import torch
 import torch.nn as nn
