@@ -244,7 +244,6 @@ if __name__ == "__main__":
     parser.add_argument('-b', '--bs', default=8, type=int, help='Batch size')
     parser.add_argument('-w', '--worker', default=8, type=int, help='The number of workers')
     parser.add_argument('-n', '--net', default='MotionNet', type=str, help='Which network [MotionNet/MotionNetMGDA]')
-    parser.add_argument('-a', '--adj', action='store_false', help='Whether predict the relative offset between frames')
     parser.add_argument('-j', '--jitter', action='store_false', help='Whether to apply jitter suppression')
 
     args = parser.parse_args()
@@ -264,5 +263,5 @@ if __name__ == "__main__":
     eval_file_name = os.path.join(args.log, 'eval.txt')
     eval_saver = open(eval_file_name, 'w')
     eval_motion_displacement(model, eval_saver, use_adj_frame_pred=True, dataloader=testloader, 
-                                sample_nums=len(testset), use_motion_state_pred_masking=True)
+                                sample_nums=len(testset), use_motion_state_pred_masking=args.jitter)
 
