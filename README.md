@@ -1,5 +1,5 @@
 # Semi-Supervised Class-Agnostic Motion Prediction with Pseudo Label Regeneration and BEVMix
-Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic Motion Prediction with Pseudo Label Regeneration and BEVMix". [**[Arxiv]**](https://arxiv.org/abs/2312.08009)
+Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic Motion Prediction with Pseudo Label Regeneration and BEVMix" [**[Arxiv]**](https://arxiv.org/abs/2312.08009)
 
 ## 🔨 Dependencies and Installation
 - Pytorch >= 1.7.1
