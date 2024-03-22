@@ -48,6 +48,10 @@ python train_stage2.py --data [bev training folder] --GSdata_root [ground remova
 |1% (semi)|[SSMP1%](https://drive.google.com/file/d/1l7NC4uLapSMGbWeQtk5808gX0jdB4IjG/view?usp=sharing)|
 |5% (semi)|[SSMP5%](https://drive.google.com/file/d/1sPdObVITSxPssICARqJLrFsCUV8FLwgd/view?usp=sharing)|
 |10% (semi)|[SSMP10%](https://drive.google.com/file/d/127u-LxePHyE8wyAbyrR9stLAN-vxOiQ6/view?usp=sharing)|
+### Testing
+```
+python test.py --data [bev testing folder] --model [model path] --log_path [path to save results] --jitter
+```
 ## Citation
 ```
 @misc{wang2023semisupervised,
