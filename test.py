@@ -1,4 +1,4 @@
-# modified based on 'gen_data.py' in MotionNet(https://www.merl.com/research/?research=license-request&sw=MotionNet)
+# modified based on 'test.py' in MotionNet(https://www.merl.com/research/?research=license-request&sw=MotionNet)
 import torch
 import torch.nn as nn
 import numpy as np
