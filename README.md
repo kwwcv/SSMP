@@ -3,6 +3,10 @@ Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic 
 
 ## 🔨 Dependencies and Installation
 - Pytorch >= 1.7.1
+### Dataset
+- Download the [nuScenes data](https://www.nuscenes.org/).
+- Run command `python data/gen_data.py` to generate preprocessed BEV data. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) for detailed instructions.
+- Run command `python data/gen_GSdata.py` to generate preprocessed ground removed BEV data.
 ## TO BE DONE
 ## Evaluation
 ### Trained model
