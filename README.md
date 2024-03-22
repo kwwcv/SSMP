@@ -21,7 +21,7 @@ python train_stage1.py --data [bev training folder] --seed [random seed] --log
 
 # stage two: train model with both labeled and unlabeled data
 python train_stage2.py --data [bev training folder] --GSdata_root [ground removal bev training folder] \
-      --seed [random seed] --if_lr --if_bev --log
+      --seed [random seed] --if_lr --if_bevmix --log
 
 # Keep the same [random seed] to make sure stage one and stage two are using the same labeled data
 # when using [random seed] to randomly divide unlabeled and labeled data.
@@ -34,7 +34,7 @@ python train_stage1.py --data [bev training folder] --preset_semi [split file] -
 
 # stage 2
 python train_stage2.py --data [bev training folder] --GSdata_root [ground removal bev training folder] \
-      --preset_semi --if_lr --if_bev --log
+      --preset_semi --if_lr --if_bevmix --log
 ```
 
 ## Evaluation
