@@ -12,8 +12,8 @@ cd SSMP
 - Download the [nuScenes data](https://www.nuscenes.org/).
 - Run command `python data/gen_data.py` to generate preprocessed BEV data for training, validating, and testing. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) for detailed instructions.
 - Run command `python data/gen_GSdata.py` to generate preprocessed ground-removed BEV data for training.
-### Training
-
+- 
+## Training
 Randomly divide the training data into labeled and unlabeled data sets.
 ```
 # stage 1: train model with only labeled data
