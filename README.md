@@ -15,7 +15,7 @@ cd SSMP
 # sys.path.append('root_path/SSMP')
 # sys.path.append('root_path/SSMP/nuscenes-devkit/python-sdk/')
 ```
-- Run command `python data/gen_data.py` to generate preprocessed BEV data for training, validating, and testing. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) for detailed instructions.
+- Run command `python data/gen_data.py` to generate preprocessed BEV data for training, validating, and testing. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) and `python data/gen_data.py -h` for detailed instructions.
 - Run command `python data/gen_GSdata.py` to generate preprocessed ground-removed BEV data for training.
 ## Training
 Randomly divide the training data into labeled and unlabeled data sets.
