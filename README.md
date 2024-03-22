@@ -3,6 +3,11 @@ Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic 
 
 ## 🔨 Dependencies and Installation
 - Pytorch >= 1.7.1
+```
+# git clone this repository
+git clone https://github.com/kwwcv/SSMP
+cd SSMP
+```
 ### Dataset
 - Download the [nuScenes data](https://www.nuscenes.org/).
 - Run command `python data/gen_data.py` to generate preprocessed BEV data for training, validating, and testing. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) for detailed instructions.
