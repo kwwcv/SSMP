@@ -23,7 +23,7 @@ cd SSMP
 # patchwork_module_path = "root_path/patchwork-plusplus/build/python_wrapper"
 ```
 - Run command `python data/gen_GSdata.py` to generate preprocessed ground-removed BEV data for training.
-## Training
+## 🔥 Training
 Randomly divide the training data into labeled and unlabeled data sets.
 ```
 # stage 1: train model with only labeled data
@@ -47,7 +47,7 @@ python train_stage2.py --data [bev training folder] --GSdata_root [ground remova
       --resume [stage 1 trained model] --preset_semi [split file] --if_lr --if_bevmix --log
 ```
 
-## Evaluation
+## 🎯 Evaluation
 ### Trained model
 |Ratio|Path|
 |---|---|
