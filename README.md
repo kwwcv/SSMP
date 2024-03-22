@@ -16,6 +16,12 @@ cd SSMP
 # sys.path.append('root_path/SSMP/nuscenes-devkit/python-sdk/')
 ```
 - Run command `python data/gen_data.py` to generate preprocessed BEV data for training, validating, and testing. Refer to [MotionNet](https://github.com/pxiangwu/MotionNet) and `python data/gen_data.py -h` for detailed instructions.
+  
+- Install the ground segmentation algorithm following [Patchwork++](https://github.com/url-kaist/patchwork-plusplus). One can also try removing the ground points by simply setting a threshold along the Z-axis.
+```
+# modified the following path in gen_GSdata.py
+# patchwork_module_path = "root_path/patchwork-plusplus/build/python_wrapper"
+```
 - Run command `python data/gen_GSdata.py` to generate preprocessed ground-removed BEV data for training.
 ## Training
 Randomly divide the training data into labeled and unlabeled data sets.
