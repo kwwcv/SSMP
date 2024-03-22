@@ -239,7 +239,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--data', default='/bev_nuScenes/test/', type=str, help='The path to the [val/test] dataset')
     parser.add_argument('-m', '--model', default=None, type=str, help='The path to the trained model')
-    parser.add_argument('-l', '--log', default=None, type=str, help='The path to the txt file for saving eval results')
+    parser.add_argument('-l', '--log_path', default=None, type=str, help='The path to the txt file for saving eval results')
     parser.add_argument('-s', '--split', default='test', type=str, help='Which split [val/test]')
     parser.add_argument('-b', '--bs', default=8, type=int, help='Batch size')
     parser.add_argument('-w', '--worker', default=8, type=int, help='The number of workers')
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     model.load_state_dict(checkpoint)
     model = model.to(device)
     # Logging Evaluation details
-    eval_file_name = os.path.join(args.log, 'eval.txt')
+    eval_file_name = os.path.join(args.log_path, 'eval.txt')
     eval_saver = open(eval_file_name, 'w')
     eval_motion_displacement(model, eval_saver, use_adj_frame_pred=True, dataloader=testloader, 
                                 sample_nums=len(testset), use_motion_state_pred_masking=args.jitter)
