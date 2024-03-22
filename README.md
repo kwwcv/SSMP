@@ -17,7 +17,8 @@ Official implementation for our AAAI2024 paper: "Semi-Supervised Class-Agnostic 
 
 ## 🍭 Acknowledgement
 Our project is based on
-[MotionNet]([https://arxiv.org/abs/2312.08009](https://github.com/pxiangwu/MotionNet))
+[MotionNet](https://github.com/pxiangwu/MotionNet)
+
 The optimal transport solver is adopted from
 [Self-Point-Flow](https://github.com/L1bra1/Self-Point-Flow)
 
