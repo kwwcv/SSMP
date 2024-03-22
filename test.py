@@ -238,7 +238,7 @@ def eval_motion_displacement(model, saver, use_adj_frame_pred=False,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--data', default='/bev_nuScenes/test/', type=str, help='The path to the [val/test] dataset')
-    parser.add_argument('-m', '--model', default='/preset/SSMP1%.pth', type=str, help='The path to the trained model')
+    parser.add_argument('-m', '--model', default=None, type=str, help='The path to the trained model')
     parser.add_argument('-l', '--log', default=None, type=str, help='The path to the txt file for saving eval results')
     parser.add_argument('-s', '--split', default='test', type=str, help='Which split [val/test]')
     parser.add_argument('-b', '--bs', default=8, type=int, help='Batch size')
