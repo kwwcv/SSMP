@@ -219,39 +219,3 @@ class MotionNet(nn.Module):
         disp = disp.view(-1, 2, x.size(-2), x.size(-1))
 
         return disp, cell_class_pred, state_class_pred
-
-
-# For MGDA loss computation
-class FeatEncoder(nn.Module):
-    def __init__(self, height_feat_size=13):
-        super(FeatEncoder, self).__init__()
-        self.stpn = STPN(height_feat_size=height_feat_size)
-
-    def forward(self, bevs):
-        bevs = bevs.permute(0, 1, 4, 2, 3)  # (Batch, seq, z, h, w)
-        x = self.stpn(bevs)
-
-        return x
-
-
-class MotionNetMGDA(nn.Module):
-    def __init__(self, out_seq_len=20, motion_category_num=2):
-        super(MotionNetMGDA, self).__init__()
-        self.out_seq_len = out_seq_len
-
-        self.cell_classify = CellClassification()
-        self.motion_pred = MotionPrediction(seq_len=self.out_seq_len)
-        self.state_classify = StateEstimation(motion_category_num=motion_category_num)
-
-    def forward(self, stpn_out):
-        # Cell Classification head
-        cell_class_pred = self.cell_classify(stpn_out)
-
-        # Motion State Classification head
-        state_class_pred = self.state_classify(stpn_out)
-
-        # Motion Displacement prediction
-        disp = self.motion_pred(stpn_out)
-        disp = disp.view(-1, 2, stpn_out.size(-2), stpn_out.size(-1))
-
-        return disp, cell_class_pred, state_class_pred
