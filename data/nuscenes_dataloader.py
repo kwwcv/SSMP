@@ -11,9 +11,6 @@ class DatasetNuscenes(Dataset):
     def __init__(self, dataset_root=None, split='train', future_frame_skip=0, voxel_size=(0.25, 0.25, 0.4),
                  area_extents=np.array([[-32., 32.], [-32., 32.], [-3., 2.]]), num_category=5, scenes_ids=None):
         """
-        This dataloader loads single sequence for a keyframe, and is not designed for computing the
-         spatio-temporal consistency losses. It supports train, val and test splits.
-
         Input:
         dataset_root: Data path to the preprocessed sparse nuScenes data (for training)
         split: [train/val/test]
