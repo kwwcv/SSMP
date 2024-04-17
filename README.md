@@ -61,13 +61,14 @@ python test.py --data [bev testing folder] --model [model path] \
 ```
 ## Citation
 ```
-@misc{wang2023semisupervised,
-      title={Semi-Supervised Class-Agnostic Motion Prediction with Pseudo Label Regeneration and BEVMix}, 
-      author={Kewei Wang and Yizheng Wu and Zhiyu Pan and Xingyi Li and Ke Xian and Zhe Wang and Zhiguo Cao and Guosheng Lin},
-      year={2023},
-      eprint={2312.08009},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{wang2024semi,
+  title={Semi-supervised Class-Agnostic Motion Prediction with Pseudo Label Regeneration and BEVMix},
+  author={Wang, Kewei and Wu, Yizheng and Pan, Zhiyu and Li, Xingyi and Xian, Ke and Wang, Zhe and Cao, Zhiguo and Lin, Guosheng},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={6},
+  pages={5490--5498},
+  year={2024}
 }
 ```
 
