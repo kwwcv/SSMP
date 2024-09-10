@@ -44,7 +44,7 @@ python train_stage1.py --data [bev training folder] --preset_semi [split file] -
 
 # stage 2
 python train_stage2.py --data [bev training folder] --GSdata_root [ground removal bev training folder] \
-      --resume [stage 1 trained model] --preset_semi [split file] --if_lr --if_bevmix --log
+      --resume [stage 1 trained model] --preset_semi [split file] --if_lf --if_bevmix --log
 ```
 
 ## 🎯 Evaluation
